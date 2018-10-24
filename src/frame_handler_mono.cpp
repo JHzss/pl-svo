@@ -45,7 +45,8 @@ FrameHandlerMono::FrameHandlerMono(vk::AbstractCamera* cam) :
   FrameHandlerBase(),
   cam_(cam),
   reprojector_(cam_, map_),
-  depth_filter_(NULL)
+  depth_filter_(NULL),
+  viewer_(NULL)
 {
   initialize();
 }
@@ -96,6 +97,9 @@ void FrameHandlerMono::initialize()
   // Setup the Depth-Filter object
   depth_filter_ = new DepthFilter(pt_feature_detector, seg_feature_detector, depth_filter_cb, depth_filter_cb_ls );
   depth_filter_->startThread();
+
+  cv::Size image_size = cv::Size(752, 480);
+  viewer_ = Viewer::create( map__, image_size);
 }
 
 void FrameHandlerMono::initialize(const Options opts)
@@ -134,6 +138,7 @@ void FrameHandlerMono::initialize(const Options opts)
   // Setup the Depth-Filter object
   depth_filter_ = new DepthFilter(pt_feature_detector, seg_feature_detector, depth_filter_cb, depth_filter_cb_ls );
   depth_filter_->startThread();
+
 }
 
 FrameHandlerMono::~FrameHandlerMono()
@@ -157,7 +162,10 @@ void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp)
   SVO_START_TIMER("pyramid_creation");
   // The Frame constructor initializes new_frame_
   // and creates the image pyramid (also stored in Frame as img_pyr_)
+
+
   new_frame_.reset(new Frame(cam_, img.clone(), timestamp));
+
   SVO_STOP_TIMER("pyramid_creation");
 
   // process frame
@@ -173,6 +181,8 @@ void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp)
                           map_.getClosestKeyframe(last_frame_));
 
   // set last frame
+
+  viewer_->setCurrentFrame(new_frame_);
   last_frame_ = new_frame_;
   new_frame_.reset();
 

@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1dceb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1dceb.dir/build.make CMakeFiles/cmTC_1dceb.dir/build
+make[1]: 正在进入目录 `/home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1dceb.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1dceb.dir/CheckSymbolExists.c.o   -c /home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1dceb
+/home/jh/clion-2016.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1dceb.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1dceb.dir/CheckSymbolExists.c.o  -o cmTC_1dceb -rdynamic 
+CMakeFiles/cmTC_1dceb.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_1dceb] 错误 1
+make[1]:正在离开目录 `/home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_1dceb/fast] 错误 2
+
+File /home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e415/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8e415.dir/build.make CMakeFiles/cmTC_8e415.dir/build
+make[1]: 正在进入目录 `/home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e415.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8e415.dir/CheckFunctionExists.c.o   -c /home/jh/clion-2016.3.4/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8e415
+/home/jh/clion-2016.3.4/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e415.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8e415.dir/CheckFunctionExists.c.o  -o cmTC_8e415 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_8e415] 错误 1
+make[1]:正在离开目录 `/home/jh/pl-svo/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_8e415/fast] 错误 2
+
+

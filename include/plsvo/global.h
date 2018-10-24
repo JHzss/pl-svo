@@ -34,9 +34,16 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <math.h>
+#include <mutex>
+#include <unordered_set>
+#include <thread>
 
 #include <Eigen/Core>
 #include <opencv2/opencv.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include "opencv2/calib3d/calib3d.hpp"
 #include <line_descriptor/descriptor_custom.hpp>
 #include <sophus/se3.h>
 #include <vikit/performance_monitor.h>

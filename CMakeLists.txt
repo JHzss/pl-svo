@@ -2,7 +2,7 @@
 # user build settings
 SET(TRACE TRUE)
 SET(HAVE_G2O FALSE)
-SET(HAVE_MRPT TRUE)
+SET(HAVE_MRPT FALSE)
 
 ################################################################################
 
@@ -13,6 +13,7 @@ SET(PROJECT_NAME plsvo)
 PROJECT(${PROJECT_NAME})
 CMAKE_MINIMUM_REQUIRED (VERSION 2.8.3)
 SET(CMAKE_BUILD_TYPE Release) # Release, RelWithDebInfo -> Set in cmake-gui option
+#SET(CMAKE_BUILD_TYPE Debug)
 SET(CMAKE_VERBOSE_MAKEFILE OFF)
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/CMakeModules/")
 
@@ -35,12 +36,19 @@ ELSE()
 ENDIF()
 SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O3 -fsee -fomit-frame-pointer -fno-signed-zeros -fno-math-errno -funroll-loops")
 
-# Add plain cmake packages 
+# Add plain cmake packages
+
+set(OpenCV_DIR /home/jh/opencv-3.2.0/build)
+set(Sophus_DIR /home/jh/sophus_svo/Sophus/build)
+set(fast_DIR /home/jh/fast/build)
 FIND_PACKAGE(OpenCV 3 REQUIRED)
 FIND_PACKAGE(Eigen3 REQUIRED)
 FIND_PACKAGE(Sophus REQUIRED)
 FIND_PACKAGE(fast REQUIRED)
 FIND_PACKAGE(Boost REQUIRED COMPONENTS thread system filesystem)
+
+find_package(Pangolin REQUIRED)
+include_directories(${Pangolin_INCLUDE_DIRS})
 
 IF(HAVE_MRPT)
     SET(MRPT_DONT_USE_DBG_LIBS 1) #use release libraries for linking even if "Debug" CMake build
@@ -54,6 +62,7 @@ if(NOT YAML_CPP_LIBRARIES)
   INCLUDE_DIRECTORIES(${YAML_CPP_INCLUDE_DIRS})
 endif(NOT YAML_CPP_LIBRARIES)
 
+SET(vikit_common_DIR /home/jh/rpg_vikit/vikit_common/build)
 FIND_PACKAGE(vikit_common REQUIRED)
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
@@ -74,10 +83,11 @@ INCLUDE_DIRECTORIES(
 LIST(APPEND LINK_LIBS 
   ${OpenCV_LIBS}
   #${Sophus_LIBRARIES}
+  ${Pangolin_LIBRARIES}
   ${Boost_LIBRARIES}
   ${fast_LIBRARIES}
   ${YAML_CPP_LIBRARIES}
-  ~/libs/Sophus/build/libSophus.so
+  ${Sophus_LIBRARIES}
   ${PROJECT_SOURCE_DIR}/3rdparty/line_descriptor/lib/liblinedesc.so
 )
 
@@ -101,7 +111,9 @@ LIST(APPEND SOURCEFILES
   src/feature_detection.cpp
   src/depth_filter.cpp
   src/config.cpp
-  src/sparse_img_align.cpp)
+  src/sparse_img_align.cpp
+  src/viewer.cpp
+        src/keyframe.cpp)
 
 IF(HAVE_MRPT)
     LIST(APPEND SOURCEFILES src/sceneRepresentation.cpp)
@@ -125,4 +137,5 @@ IF(HAVE_MRPT)
     TARGET_LINK_LIBRARIES( run_pipeline	        plsvo)
 ENDIF()
 
-
+ADD_EXECUTABLE( run_pp  	    app/run_pp.cpp )
+TARGET_LINK_LIBRARIES( run_pp	        plsvo)

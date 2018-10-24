@@ -75,6 +75,12 @@ void Frame::setKeyframe()
   setKeyPoints();
 }
 
+    //! Twc
+    SE3 Frame::pose()
+    {
+      return T_f_w_.inverse();
+    }
+
 void Frame::addFeature(PointFeat *ftr)
 {
   pt_fts_.push_back(ftr);

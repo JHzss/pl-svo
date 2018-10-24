@@ -38,6 +38,8 @@ struct Feature
 {
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
+    typedef std::shared_ptr<Feature> Ptr;
+
   Frame* frame;         //!< Pointer to frame in which the feature was detected.
   Vector2d px;          //!< Any feature must have a center or origin. Coordinates in pixels on pyramid level 0.
   Vector3d f;           //!< Unit-bearing vector of the feature center.

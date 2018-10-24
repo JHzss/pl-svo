@@ -125,6 +125,9 @@ public:
 class Map : boost::noncopyable
 {
 public:
+
+    typedef boost::shared_ptr<Map> Ptr;
+
   list< FramePtr > keyframes_;          //!< List of keyframes in the map.
   list< Point* > trash_points_;         //!< A deleted point is moved to the trash bin. Now and then this is cleaned. One reason is that the visualizer must remove the points also.
   MapPointCandidates point_candidates_;

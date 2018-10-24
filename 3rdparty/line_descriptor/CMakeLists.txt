@@ -1,6 +1,8 @@
 project( line-descriptor )
 
 cmake_minimum_required(VERSION 2.7)
+
+set(OpenCV_DIR /home/jh/opencv-3.2.0/build)
 find_package( OpenCV 3 REQUIRED)
 
 if(COMMAND cmake_policy)

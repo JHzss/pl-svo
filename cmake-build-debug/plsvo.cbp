@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="plsvo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\opencv-3.2.0\;CMake Files\..\opencv-3.2.0\build\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\x86_64-linux-gnu\;CMake Files\..\..\..\usr\local\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\usr\local\lib\x86_64-linux-gnu\cmake\eigen3\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\Pangolin\;CMake Files\..\sophus_svo\;CMake Files\..\sophus_svo\Sophus\;CMake Files\..\sophus_svo\Sophus\build\;CMake Files\..\fast\;CMake Files\..\fast\build\;CMake Files\..\rpg_vikit\;CMake Files\..\rpg_vikit\vikit_common\;CMake Files\..\rpg_vikit\vikit_common\build\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jh/pl-svo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jh/pl-svo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jh/pl-svo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_pp">
+				<Option output="/home/jh/pl-svo/bin/run_pp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/pl-svo/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/jh/pl-svo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/build"/>
+					<Add directory="/home/jh/opencv-3.2.0/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/include/opencv"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/core/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/photo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/video/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/viz/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/objdetect/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/superres/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/stitching/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videostab/include"/>
+					<Add directory="/home/jh/sophus_svo/Sophus"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/home/jh/fast/include"/>
+					<Add directory="/home/jh/pl-svo/3rdparty/line_descriptor/include"/>
+					<Add directory="/home/jh/rpg_vikit/vikit_common/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_pp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_pp/fast">
+				<Option output="/home/jh/pl-svo/bin/run_pp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/pl-svo/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/jh/pl-svo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/build"/>
+					<Add directory="/home/jh/opencv-3.2.0/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/include/opencv"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/core/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/photo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/video/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/viz/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/objdetect/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/superres/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/stitching/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videostab/include"/>
+					<Add directory="/home/jh/sophus_svo/Sophus"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/home/jh/fast/include"/>
+					<Add directory="/home/jh/pl-svo/3rdparty/line_descriptor/include"/>
+					<Add directory="/home/jh/rpg_vikit/vikit_common/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_pp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="plsvo">
+				<Option output="/home/jh/pl-svo/lib/libplsvo.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/pl-svo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/jh/pl-svo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/build"/>
+					<Add directory="/home/jh/opencv-3.2.0/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/include/opencv"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/core/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/photo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/video/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/viz/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/objdetect/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/superres/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/stitching/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videostab/include"/>
+					<Add directory="/home/jh/sophus_svo/Sophus"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/home/jh/fast/include"/>
+					<Add directory="/home/jh/pl-svo/3rdparty/line_descriptor/include"/>
+					<Add directory="/home/jh/rpg_vikit/vikit_common/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 plsvo"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="plsvo/fast">
+				<Option output="/home/jh/pl-svo/lib/libplsvo.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/pl-svo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/jh/pl-svo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/build"/>
+					<Add directory="/home/jh/opencv-3.2.0/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/include/opencv"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/core/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/flann/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgproc/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ml/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/photo/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/video/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/viz/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/imgcodecs/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/shape/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videoio/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/highgui/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/objdetect/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/superres/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/ts/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/features2d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/calib3d/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/stitching/include"/>
+					<Add directory="/home/jh/opencv-3.2.0/modules/videostab/include"/>
+					<Add directory="/home/jh/sophus_svo/Sophus"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/home/jh/fast/include"/>
+					<Add directory="/home/jh/pl-svo/3rdparty/line_descriptor/include"/>
+					<Add directory="/home/jh/rpg_vikit/vikit_common/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/4.8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.8"/>
+					<Add directory="/usr/include/c++/4.8/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 plsvo/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="plsvo_includes">
+				<Option working_dir="/home/jh/pl-svo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 plsvo_includes"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jh/pl-svo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jh/pl-svo/3rdparty/line_descriptor/include/line_descriptor/descriptor_custom.hpp">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/3rdparty/line_descriptor/include/line_descriptor_custom.hpp">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/3rdparty/line_descriptor/src/bitarray_custom.hpp">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/3rdparty/line_descriptor/src/bitops_custom.hpp">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/3rdparty/line_descriptor/src/precomp_custom.hpp">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/3rdparty/line_descriptor/src/types_custom.hpp">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/app/run_pp.cpp">
+			<Option target="run_pp"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/bundle_adjustment.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/config.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/depth_filter.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/feature.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/feature3D.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/feature_alignment.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/feature_detection.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/frame.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/frame_handler_base.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/frame_handler_mono.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/global.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/initialization.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/keyframe.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/map.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/matcher.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/point.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/pose_optimizer.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/reprojector.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/sceneRepresentation.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/sparse_img_align.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/include/plsvo/viewer.h">
+			<Option target="plsvo_includes"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/config.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/depth_filter.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/feature.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/feature3D.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/feature3D_impl.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/feature_alignment.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/feature_detection.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/frame.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/frame_handler_base.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/frame_handler_mono.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/initialization.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/keyframe.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/map.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/matcher.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/pose_optimizer.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/reprojector.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/sparse_img_align.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/src/viewer.cpp">
+			<Option target="plsvo"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../opencv-3.2.0/build/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\opencv-3.2.0\build\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../opencv-3.2.0/build/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\opencv-3.2.0\build\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../opencv-3.2.0/build/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\opencv-3.2.0\build\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../../../usr/local/lib/x86_64-linux-gnu/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\x86_64-linux-gnu\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../../../usr/local/lib/cmake/Pangolin/PangolinConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../../../usr/local/lib/cmake/Pangolin/PangolinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../../../usr/local/lib/cmake/Pangolin/PangolinTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../../../usr/local/lib/cmake/Pangolin/PangolinTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../sophus_svo/Sophus/build/SophusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\sophus_svo\Sophus\build\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../fast/build/fastConfig.cmake">
+			<Option virtualFolder="CMake Files\..\fast\build\"/>
+		</Unit>
+		<Unit filename="/home/jh/pl-svo/../rpg_vikit/vikit_common/build/vikit_commonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\rpg_vikit\vikit_common\build\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

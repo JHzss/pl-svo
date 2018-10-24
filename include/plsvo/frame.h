@@ -53,13 +53,15 @@ typedef vector<cv::Mat> ImgPyr;
 class Frame : boost::noncopyable
 {
 public:
+
+    typedef std::shared_ptr<Frame> Ptr;
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
     
   static int                    frame_counter_;         //!< Counts the number of created frames. Used to set the unique id.
   int                           id_;                    //!< Unique id of the frame.
   double                        timestamp_;             //!< Timestamp of when the image was recorded.
   vk::AbstractCamera*           cam_;                   //!< Camera model.
-  Sophus::SE3                   T_f_w_;                 //!< Transform (f)rame from (w)orld.
+  Sophus::SE3                   T_f_w_;                 //!< Transform (f)rame from (w)orld.  Tcw
   Matrix<double, 6, 6>          Cov_;                   //!< Covariance.
   ImgPyr                        img_pyr_;               //!< Image Pyramid.
   list<PointFeat*>              pt_fts_;                //!< List of point features in the image.
@@ -75,6 +77,8 @@ public:
 
   /// Initialize new frame and create image pyramid.
   void initFrame(const cv::Mat& img);
+
+    SE3 pose();
 
   /// Select this frame as keyframe.
   void setKeyframe();

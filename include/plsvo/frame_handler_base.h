@@ -110,6 +110,8 @@ protected:
   size_t num_obs_last_ls;                       //!< Number of LS observations in the previous frame.
   TrackingQuality tracking_quality_;            //!< An estimate of the tracking quality based on the number of tracked features.
 
+    Map::Ptr map__;
+
   /// Before a frame is processed, this function is called.
   bool startFrameProcessingCommon(const double timestamp);
 

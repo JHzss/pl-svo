@@ -32,6 +32,7 @@
 #include <plsvo/frame_handler_base.h>
 #include <plsvo/reprojector.h>
 #include <plsvo/initialization.h>
+#include <plsvo/viewer.h>
 
 namespace plsvo {
 
@@ -102,6 +103,7 @@ protected:
   initialization::KltHomographyInit klt_homography_init_; //!< Used to estimate pose of the first two keyframes by estimating a homography.
   DepthFilter* depth_filter_;                   //!< Depth estimation algorithm runs in a parallel thread and is used to initialize new 3D points.
   cv::Mat debug_img;
+  Viewer::Ptr viewer_;
 
   /// Initialize the visual odometry algorithm.
   virtual void initialize();

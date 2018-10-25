@@ -35,6 +35,8 @@
 #include <plsvo/sparse_img_align.h>
 #include <vikit/performance_monitor.h>
 #include <plsvo/depth_filter.h>
+
+#include <string.h>
 #ifdef USE_BUNDLE_ADJUSTMENT
 #include <plsvo/bundle_adjustment.h>
 #endif
@@ -183,11 +185,39 @@ void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp)
   // set last frame
 
   viewer_->setCurrentFrame(new_frame_);
+  {
+    auto fts = new_frame_->seg_fts_;
+    std::for_each(fts.begin(), fts.end(), [&](plsvo::LineFeat* i){
+        if( i->feat3D != NULL )
+          cv::line(debug_img,cv::Point2f(i->spx[0],i->spx[1]),cv::Point2f(i->epx[0],i->epx[1]),cv::Scalar(255,0,0));
+    });
+  }
+  {
+    auto fts = new_frame_->pt_fts_;
+    Patch patch( 4, debug_img );
+    for(auto it=fts.begin(); it!=fts.end(); ++it)
+    {
+      patch.setPosition((*it)->px);
+      patch.setRoi();
+      cv::rectangle(debug_img,patch.rect,cv::Scalar(255,0,0));
+    }
+  }
+
+
+
+  string name;
+  name = "/home/jh/img_x/img" + std::to_string(new_frame_->id_) + ".png";
+  cv::imshow("cv: Ref image", debug_img);
+  cv::imwrite(name,debug_img);
+  cv::waitKey(10);
+
   last_frame_ = new_frame_;
   new_frame_.reset();
 
   // finish processing
   finishFrameProcessingCommon(last_frame_->id_, res, last_frame_->nObs(), last_frame_->nLsObs());
+
+
 }
 
 void FrameHandlerMono::addImage(const cv::Mat& img, const double timestamp, cv::Mat& rec)
@@ -308,8 +338,16 @@ FrameHandlerBase::UpdateResult FrameHandlerMono::processFrame()
             cv::line(debug_img,cv::Point2f(i->spx[0],i->spx[1]),cv::Point2f(i->epx[0],i->epx[1]),cv::Scalar(0,255,0));
       });
     }
-    //cv::imshow("cv: Ref image", debug_img);
-    //cv::waitKey(30);
+
+    {
+      auto fts = new_frame_->seg_fts_;
+      std::for_each(fts.begin(), fts.end(), [&](plsvo::LineFeat* i){
+          if( i->feat3D != NULL )
+            cv::line(debug_img,cv::Point2f(i->spx[0],i->spx[1]),cv::Point2f(i->epx[0],i->epx[1]),cv::Scalar(255,0,0));
+      });
+    }
+//    cv::imshow("cv: Ref image", debug_img);
+//    cv::waitKey(30);
   }
 
   // map reprojection & feature alignment

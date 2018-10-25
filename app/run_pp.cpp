@@ -60,7 +60,7 @@ namespace plsvo {
         vk::AbstractCamera* cam_;
         FrameHandlerMono* vo_;
         Map::Ptr map_;
-        const int width = 752;
+        const int width = 640;
         const int height = 480;
 
         DepthFilter* depth_filter_;
@@ -378,23 +378,23 @@ int main(int argc, char** argv)
         vk::PinholeCamera* cam_pin;
         vk::PinholeCamera* cam_pin_und;
         cam_pin = new vk::PinholeCamera(
-                752,
-                480,
-                416.401549,
-                416.375319,
-                385.554786,
-                237.640332,
-                -0.277970,
-                0.060647,
-                -0.002097,
-                0.000373);
+                cam_config["cam_width"].as<double>(),
+                cam_config["cam_height"].as<double>(),
+                fabs(cam_config["cam_fx"].as<double>()),
+                fabs(cam_config["cam_fy"].as<double>()),
+                cam_config["cam_cx"].as<double>(),
+                cam_config["cam_cy"].as<double>(),
+                cam_config["cam_d0"].as<double>(),
+                cam_config["cam_d1"].as<double>(),
+                cam_config["cam_d2"].as<double>(),
+                cam_config["cam_d3"].as<double>()  );
         cam_pin_und = new vk::PinholeCamera(
-                752,
-                480,
-                416.401549,
-                416.375319,
-                385.554786,
-                237.640332);
+                cam_config["cam_width"].as<double>(),
+                cam_config["cam_height"].as<double>(),
+                fabs(cam_config["cam_fx"].as<double>()),
+                fabs(cam_config["cam_fy"].as<double>()),
+                cam_config["cam_cx"].as<double>(),
+                cam_config["cam_cy"].as<double>() );
         // Set options for FrameHandlerMono
         plsvo::FrameHandlerMono::Options handler_opts(true,true);
         plsvo::BenchmarkNode benchmark(cam_pin_und);

@@ -6,3 +6,15 @@ svo/datasets/*
 *~*
 *CMakeLists.txt.user
 *.bag*
+
+
+*.a
+*.so
+*~
+
+data/
+bin/
+lib/
+*build*/
+*cmake-build-debug*/
+.idea/

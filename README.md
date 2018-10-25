@@ -55,3 +55,6 @@ The **run_pipeline** basic usage is:
 
 where *<dataset_path>* refers to the sequence folder relative to the environment variable *${DATASETS_DIR}* that must be previously set. That sequence folder must contain the dataset configuration file named **dataset_params.yaml** following the examples in **pl-svo/config**, where **images_subfolder** refers to the image subfolder.
 
+
+#jh
+需要将dataset_params.yaml文件复制到<dataset_path>路径下，然后将yaml文件中的images_subfolder的参数改成数据集中图片的相对路径，并把参数文件中参数修改一下。
